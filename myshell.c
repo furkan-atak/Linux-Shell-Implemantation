@@ -125,18 +125,18 @@ void exeCommands(char * commandArr[]) {
       printf("Yanlış Komut Girdiniz! \n");
     } else if (strcmp(commandArr[0], "ls") == 0) {
        i = execv("/bin/ls", commandArr);
-       printf("Yanlış Komut Girdiniz! \n");
+       perror("Yanlış Komut Girdiniz! \n");
     }
     else if (strcmp(commandArr[0], "bash") == 0) {
        i = execv("/bin/bash", commandArr);
-       printf("Yanlış Komut Girdiniz! \n");
+       perror("Yanlış Komut Girdiniz! \n");
     }  
     else if (strcmp(commandArr[0], "islem") == 0){
         i = execv(commandArr[0], theArgs);
-        printf("Yanlış Komut Girdiniz! \n");
+        perror("Yanlış Komut Girdiniz! \n");
     }else if (strcmp(commandArr[0], "tekrar") == 0){
         i = execv(commandArr[0], theArgs);
-        printf("Yanlış Komut Girdiniz! \n");
+        perror("Yanlış Komut Girdiniz! \n");
     }else{
         printf("Yanlış Komut Girdiniz! \n");
         exit(EXIT_FAILURE);
